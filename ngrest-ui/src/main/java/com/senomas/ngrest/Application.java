@@ -24,7 +24,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @SpringBootApplication
-@ComponentScan({ "com.senomas.boot", "id.co.hanoman.avatar", "com.senomas.common.loggerfilter" })
+@ComponentScan({ "com.senomas.ngrest", "com.senomas.boot", "com.senomas.common.loggerfilter" })
 @EnableSwagger2
 @EnableScheduling
 @EnableJpaRepositories(repositoryFactoryBeanClass = RepositoryFactoryBean.class)

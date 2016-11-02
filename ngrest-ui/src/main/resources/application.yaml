@@ -11,7 +11,7 @@ spring:
             dialect: ${DB_DIALECT:org.hibernate.dialect.MySQLDialect}
 
    datasource:
-      url: jdbc:${DB_JDBC:mysql}://${DB_SERVER:localhost:3306}/${DB_NAME:ngrest}?autoReconnect=true&useSSL=false
+      url: jdbc:${DB_JDBC:mysql}://${DB_SERVER:localhost:3308}/${DB_NAME:ngrest}?autoReconnect=true&useSSL=false
       username: ${DB_USER:ngrest}
       password: ${DB_PASSWORD:dodol123}
       timeBetweenEvictionRunsMillis: 30000
@@ -67,6 +67,10 @@ logging:
 ---
 spring:
    profiles: dev
+
+   jpa:
+      hibernate:
+         ddl-auto: create
 
 logging:
    level:

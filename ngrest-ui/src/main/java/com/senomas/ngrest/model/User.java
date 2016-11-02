@@ -29,8 +29,6 @@ import com.senomas.boot.Audited;
 import com.senomas.boot.security.domain.SecurityUser;
 import com.senomas.common.rs.Views;
 
-import id.co.hanoman.avatar.model.config.Role;
-
 @Entity
 @Audited("User")
 @Table(name = "APP_USER", uniqueConstraints = @UniqueConstraint(columnNames = "USERNAME"))

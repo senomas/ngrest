@@ -21,8 +21,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.senomas.common.rs.WebResource;
-
 import ro.isdc.wro.model.WroModel;
 import ro.isdc.wro.model.factory.WroModelFactory;
 import ro.isdc.wro.model.group.Group;
@@ -35,9 +33,6 @@ public class IndexController {
 	@Autowired
 	ResourcePatternResolver resolver;
 
-	@Autowired
-	List<WebResource> webResources;
-	
 	@Autowired
 	private Environment environment;
 	
@@ -101,7 +96,6 @@ public class IndexController {
 	@ResponseStatus(HttpStatus.OK)
 	@RequestMapping("/webjars/Semantic-UI/2.2.4/semantic.css")
 	public void semanticUiCss(HttpServletResponse response) throws Exception {
-		Thread.sleep(5000);
 		Resource res = resolver.getResource("classpath:/static/semantic.css");
 		response.setContentType("text/css");
 		IOUtils.copy(res.getInputStream(), response.getOutputStream());

@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.senomas.boot.Audited;
 import com.senomas.common.rs.Views;
 
-import id.co.hanoman.avatar.model.config.AuthorityData;
-
 @Entity
 @Audited
 @Table(name = "APP_ROLE", uniqueConstraints = { @UniqueConstraint(columnNames = "CODE"),

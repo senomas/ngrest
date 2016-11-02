@@ -1,4 +1,4 @@
-package com.senomas.ngrest.admin;
+package com.senomas.ngrest.service;
 
 import java.util.List;
 

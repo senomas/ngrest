@@ -1,4 +1,4 @@
-id.co.hanoman.avatar.model.config.Role#code:
+com.senomas.ngrest.model.Role#code:
    -
       code: root
       name: Root
@@ -46,9 +46,9 @@ id.co.hanoman.avatar.model.config.Role#code:
          - product-save
          - product-create
 
-id.co.hanoman.avatar.model.config.User#username:
+com.senomas.ngrest.model.User#username:
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: dev
       plainPassword: dodol123
       name: Dev User Test
@@ -56,7 +56,7 @@ id.co.hanoman.avatar.model.config.User#username:
          - root
          - admin
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: adi
       plainPassword: dodol123
       name: Adi
@@ -64,7 +64,7 @@ id.co.hanoman.avatar.model.config.User#username:
          - root
          - admin
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: budi
       plainPassword: dodol123
       name: Budi
@@ -72,21 +72,21 @@ id.co.hanoman.avatar.model.config.User#username:
          - opr
          - user
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: cici
       plainPassword: dodol123
       name: Cici
       "roles#code":
          - opr
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: dodi
       plainPassword: dodol123
       name: Dodi
       "roles#code":
          - admin
    -
-      "@type": id.co.hanoman.avatar.model.config.User
+      "@type": com.senomas.ngrest.model.User
       username: edi
       plainPassword: dodol123
       name: Edi
