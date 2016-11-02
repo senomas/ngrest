@@ -1,0 +1,96 @@
+id.co.hanoman.avatar.model.config.Role#code:
+   -
+      code: root
+      name: Root
+   -
+      code: admin
+      name: Administrator
+      "authorities#code":
+         - log-event-list
+         - log-event-detail
+         - user-list
+         - user-detail
+         - user-save
+         - user-create
+         - role-list
+         - role-detail
+         - role-save
+         - role-create
+         - role-delete
+         - product-list
+         - product-detail
+         - product-save
+         - product-create
+   -
+      code: opr
+      name: Operator
+      "authorities#code":
+         - log-event-list
+         - log-event-detail
+         - user-list
+         - user-detail
+         - product-list
+         - product-detail
+   -
+      code: user
+      name: User
+      "authorities#code":
+         - log-event-list
+         - log-event-detail
+         - user-list
+         - user-detail
+         - role-list
+         - role-detail
+         - product-list
+         - product-detail
+         - product-save
+         - product-create
+
+id.co.hanoman.avatar.model.config.User#username:
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: dev
+      plainPassword: dodol123
+      name: Dev User Test
+      "roles#code":
+         - root
+         - admin
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: adi
+      plainPassword: dodol123
+      name: Adi
+      "roles#code":
+         - root
+         - admin
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: budi
+      plainPassword: dodol123
+      name: Budi
+      "roles#code":
+         - opr
+         - user
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: cici
+      plainPassword: dodol123
+      name: Cici
+      "roles#code":
+         - opr
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: dodi
+      plainPassword: dodol123
+      name: Dodi
+      "roles#code":
+         - admin
+   -
+      "@type": id.co.hanoman.avatar.model.config.User
+      username: edi
+      plainPassword: dodol123
+      name: Edi
+      "roles#code":
+         - admin
+
+

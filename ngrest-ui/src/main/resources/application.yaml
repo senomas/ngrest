@@ -1,0 +1,81 @@
+spring:
+   jackson:
+      time-zone: GMT+7
+      serialization.write-dates-as-timestamps: false
+
+   jpa:
+      hibernate:
+         ddl-auto: update
+      properties:
+         hibernate:
+            dialect: ${DB_DIALECT:org.hibernate.dialect.MySQLDialect}
+
+   datasource:
+      url: jdbc:${DB_JDBC:mysql}://${DB_SERVER:localhost:3306}/${DB_NAME:ngrest}?autoReconnect=true&useSSL=false
+      username: ${DB_USER:ngrest}
+      password: ${DB_PASSWORD:dodol123}
+      timeBetweenEvictionRunsMillis: 30000
+      minEvictableIdleTimeMillis: 60000
+      testOnBorrow: true
+      validationInterval: 30000
+      validationQuery: "select 1"
+
+wro4j:
+   filterUrl: /wro
+   cacheUpdatePeriod: 5
+   modelUpdatePeriod: 5
+   resourceWatcherUpdatePeriod: 5
+   debug: true
+   disableCache: false
+   gzipResources: true
+   cacheGzippedContent: false
+   ignoreMissingResources: true
+   parallelPreprocessing: true
+   ignoreEmptyGroup: true
+   ignoreFailingProcessor: true
+   hashStrategy: MD5
+   managerFactory:
+      preProcessors: cssUrlRewriting, cssImport, semicolonAppender, conformColors, consoleStripper
+      postProcessors: yuiCssMin, googleClosureAdvanced, jsMin
+
+rest:
+   version: 1.0
+   uri: /api/v${rest.version}
+   auth.uri: /auth/v${rest.version}
+
+com.senomas:
+   http-logger:
+      order: 0
+      path:
+         "/": BASIC
+         "/v2/api-docs": OFF
+         "/swagger-": OFF
+         "/configuration/": OFF
+         "/api/": ALL
+   web:
+      resolver:
+         script:
+            - "/app/lib/**/*.js"
+            - "/app/**/app.js"
+         css:
+            - "/webjars/**/*.css"
+
+logging:
+   level:
+      '*': INFO
+
+---
+spring:
+   profiles: dev
+
+logging:
+   level:
+      '*': DEBUG
+      org.springframework.security: DEBUG
+      org.springframework.orm.jpa: DEBUG
+      org.hibernate.SQL: DEBUG
+      org.hibernate: INFO
+      com.senomas: DEBUG
+      com.senomas.boot.security: DEBUG
+      id.co.hanoman: DEBUG
+

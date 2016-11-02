@@ -1,0 +1,35 @@
+<groups xmlns="http://www.isdc.ro/wro">
+	<group name="all">
+		<!-- <css>classpath:META-INF/resources/webjars/Semantic-UI/2.2.4/semantic.css</css> -->
+		<css>classpath:static/app/css/app.css</css>
+
+		<js>classpath:META-INF/resources/webjars/jquery/3.0.0-rc1/dist/jquery.js</js>
+		<js>classpath:META-INF/resources/webjars/angularjs/1.5.8/angular.js
+		</js>
+		<js>classpath:static/app/js/lib/fcsaNumber.js</js>
+		<js>classpath:static/app/js/lib/js-yaml.js</js>
+		<js>classpath:META-INF/resources/webjars/noty/2.3.8/js/noty/packaged/jquery.noty.packaged.js
+		</js>
+		<js>classpath:META-INF/resources/webjars/angular-ui-router/0.3.1/release/angular-ui-router.js
+		</js>
+		<js>classpath:META-INF/resources/webjars/angular-local-storage/0.5.2/dist/angular-local-storage.js
+		</js>
+		<js>classpath:META-INF/resources/webjars/semantic-ui/2.2.4/dist/semantic.js
+		</js>
+		<js>classpath:static/app/js/app.js</js>
+		<js>classpath:static/app/js/data-factory.js</js>
+		<js>classpath:static/app/js/router.js</js>
+		<js>classpath:static/generic/js/router.js</js>
+		<js>classpath:static/pa-plan/js/router.js</js>
+		<js>classpath:static/app/js/ctrl/home.js</js>
+		<js>classpath:static/app/js/ctrl/log-event.js</js>
+		<js>classpath:static/app/js/ctrl/audit.js</js>
+		<js>classpath:static/app/js/ctrl/product.js</js>
+		<js>classpath:static/app/js/ctrl/user.js</js>
+		<js>classpath:static/app/js/ctrl/role.js</js>
+		<js>classpath:static/app/js/ctrl/attribute.js</js>
+		<js>classpath:static/app/js/ctrl/sys-param.js</js>
+		<js>classpath:static/generic/js/ctrl/generic.js</js>
+		<js>classpath:static/pa-plan/js/ctrl/pa-plan.js</js>
+	</group>
+</groups>
